@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Indica que el documento es HTML5 -->
+  <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 (permite acentos, ñ, etc.) -->
+  <title>Ejemplo Bootstrap Completo</title> <!-- Título que aparece en la pestaña del navegador -->
+
+  <!-- Bootstrap CSS desde CDN (para estilos predefinidos) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap JS (para componentes dinámicos como modal, carrusel, etc.) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR: Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <!-- Marca o logo -->
+      <a class="navbar-brand" href="#">Mi Sitio</a>
+      <!-- Botón hamburguesa en móviles -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Menú desplegable -->
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto"> <!-- ms-auto: empuja a la derecha -->
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Alumnos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Proyectos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER: Encabezado principal -->
+  <header class="bg-primary text-white text-center p-5">
+    <h1>Ejemplo Bootstrap</h1>
+    <p class="lead">Probando componentes y estilos</p>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="container my-5">
+
+    <!-- BOTONES -->
+    <section>
+      <h2 class="mb-3">Botones</h2>
+      <!-- Cada botón usa clases de Bootstrap para colores -->
+      <button class="btn btn-primary">Primario</button>
+      <button class="btn btn-success">Éxito</button>
+      <button class="btn btn-danger">Peligro</button>
+      <button class="btn btn-warning">Advertencia</button>
+      <button class="btn btn-info">Info</button>
+      <button class="btn btn-dark">Oscuro</button>
+    </section>
+
+    <hr> <!-- Línea divisoria -->
+
+    <!-- GRID: Sistema de columnas -->
+    <section>
+      <h2 class="mb-3">Columnas con Grid</h2>
+      <div class="row text-white">
+        <!-- col-md-4: 3 columnas iguales en pantallas medianas -->
+        <div class="col-md-4 bg-danger p-3">Columna 1</div>
+        <div class="col-md-4 bg-success p-3">Columna 2</div>
+        <div class="col-md-4 bg-primary p-3">Columna 3</div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- TARJETAS -->
+    <section>
+      <h2 class="mb-3">Tarjetas</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <!-- Imagen superior -->
+            <img src="img/imagen.png" class="card-img-top" alt="Imagen">
+            <div class="card-body">
+              <h5 class="card-title">Título de tarjeta</h5>
+              <p class="card-text">Texto dentro de la tarjeta.</p>
+              <a href="#" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <!-- Otra tarjeta -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="img/imagen.png" class="card-img-top" alt="Imagen">
+            <div class="card-body">
+              <h5 class="card-title">Otra tarjeta</h5>
+              <p class="card-text">Otra descripción breve.</p>
+              <a href="#" class="btn btn-success">Entrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- TABLAS -->
+    <section>
+      <h2 class="mb-3">Tablas</h2>
+      <table class="table table-striped table-bordered">
+        <thead class="table-dark"> <!-- Cabecera oscura -->
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Ana López</td>
+            <td>ana@example.com</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Carlos Pérez</td>
+            <td>carlos@example.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <!-- FORMULARIO -->
+    <section>
+      <h2 class="mb-3">Formulario</h2>
+      <!-- needs-validation: clase de Bootstrap para validar -->
+      <form class="needs-validation" novalidate>
+        <div class="mb-3">
+          <label class="form-label">Nombre</label>
+          <input type="text" class="form-control" required>
+          <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Correo</label>
+          <input type="email" class="form-control" required>
+          <div class="invalid-feedback">Por favor, ingresa un correo válido.</div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Contraseña</label>
+          <input type="password" class="form-control" required>
+          <div class="invalid-feedback">Por favor, ingresa tu contraseña.</div>
+        </div>
+        <button class="btn btn-primary" type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <hr>
+
+    <!-- ALERTAS -->
+    <section>
+      <h2 class="mb-3">Alertas</h2>
+      <!-- Diferentes colores de alertas -->
+      <div class="alert alert-success">Operación exitosa</div>
+      <div class="alert alert-danger">Error encontrado</div>
+      <div class="alert alert-warning">Advertencia</div>
+    </section>
+
+    <hr>
+
+    <!-- IMÁGENES -->
+    <section>
+      <h2 class="mb-3">Imágenes básicas</h2>
+      <img src="img/imagen.png" alt="Imagen cuadrada" class="img-fluid">
+    </section>
+
+    <hr>
+
+    <!-- Imágenes con estilos -->
+    <section>
+      <h2 class="mb-3">Imágenes con bordes y formas</h2>
+      <img src="img/imagen.png" class="img-thumbnail" alt="Miniatura">
+      <img src="img/imagen.png" class="rounded" alt="Esquinas redondeadas">
+      <img src="img/imagen.png" class="rounded-circle" alt="Imagen circular">
+    </section>
+
+    <hr>
+
+    <!-- IMÁGENES ALINEADAS -->
+    <section>
+      <h2 class="mb-3">Imágenes alineadas</h2>
+      <div class="d-flex align-items-center">
+        <img src="img/imagen.png" class="me-3 rounded" alt="Icono">
+        <p>Esta es una imagen alineada a la izquierda con texto al lado.</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- GALERÍA -->
+    <section>
+      <h2 class="mb-3">Galería con Grid</h2>
+      <div class="row">
+        <!-- Cada imagen ocupa 1/3 de la fila -->
+        <div class="col-md-4 mb-3">
+          <img src="img/imagen.png" class="img-fluid rounded" alt="Foto 1">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="img/imagen.png" class="img-fluid rounded" alt="Foto 2">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="img/imagen.png" class="img-fluid rounded" alt="Foto 3">
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- CARRUSEL -->
+    <section>
+      <h2 class="mb-3">Carrusel</h2>
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Primera imagen activa -->
+          <div class="carousel-item active">
+            <img src="https://imgs.search.brave.com/7M1pPfV6HOT8mS-YqfJxl8oy9sMP9EQCssPIVXJR1is/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/Zm90b3MtcHJlbWl1/bS9nYXRvLWdhZmFz/LXRyYWJhamFuZG8t/Y29tcHV0YWRvcmEt/ZXNwYWNpby10cmFi/YWpvLWNvbG9yaWRv/XzQwNjkzOS00NDgx/My5qcGc_c2VtdD1h/aXNfaW5jb21pbmcm/dz03NDAmcT04MA" class="d-block w-100" alt="Imagen 1">
+          </div>
+          <div class="carousel-item">
+            <img src="img/imagen.png" class="d-block w-100" alt="Imagen 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://imgs.search.brave.com/tovVkGl_9Wgld3v9w64uD7fWjZM2QbZa6KOgWKX9dEk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/dmVjdG9yLXByZW1p/dW0vaWx1c3RyYWNp/b24tdmVjdG9yLWRp/c2Vuby1pbmdlbmll/cm8tc29mdHdhcmUt/dGVjbm9sb2dpYS1w/b3J0YXRpbC1jb2Rp/ZmljYWNpb24tZ2F0/by1zaW1wbGVfNzcz/ODE1LTk2LmpwZz9z/ZW10PWFpc19oeWJy/aWQmdz03NDA" class="d-block w-100" alt="Imagen 3">
+          </div>
+        </div>
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- MODAL -->
+    <section>
+      <h2 class="mb-3">Modal</h2>
+      <!-- Botón que abre el modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">
+        Abrir Modal
+      </button>
+
+      <!-- Estructura del modal -->
+      <div class="modal fade" id="miModal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Encabezado del modal -->
+            <div class="modal-header">
+              <h5 class="modal-title">Ejemplo de Modal</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <!-- Cuerpo -->
+            <div class="modal-body">
+              Aquí puedes colocar un texto, imagen o formulario.
+            </div>
+            <!-- Pie -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-success">Aceptar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center p-3">
+    <p>&copy; 2025 Ejemplo Bootstrap</p>
+  </footer>
+
+  <!-- SCRIPT DE VALIDACIÓN -->
+  <script>
+    (function () {
+      'use strict'
+      // Selecciona todos los formularios con la clase .needs-validation
+      const forms = document.querySelectorAll('.needs-validation')
+      // Recorre cada formulario
+      Array.from(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          // Si el formulario no es válido, evita el envío
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+          // Agrega la clase de Bootstrap para mostrar mensajes
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+  </script>
+
+</body>
+</html>
